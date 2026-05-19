@@ -1,6 +1,6 @@
 import type {Trade} from '../types';
 
-const countrerparties = ['TCS', 'INFY', 'WIPRO', 'HCL', 'TECHM'];
+const counterparties = ['TCS', 'INFY', 'WIPRO', 'HCL', 'TECHM'];
 const instruments = ['NIFTY', 'BANKNIFTY', 'RELIANCE', 'TCS', 'INFY'];
 const statuses: Trade['settlementStatus'][] = ['PENDING', 'SETTLED', 'FAILED', 'REJECTED'];
 
@@ -15,7 +15,7 @@ export const mockTrades: Trade[] = Array.from({length: 50}, (_, i) =>{
     return {
         id: i + 1,
         tradeReference:`TRD-${1000 + i}`,
-        counterparty: rand(countrerparties),
+        counterparty: rand(counterparties),
         instrument: rand(instruments),
         currency: 'INR',
         quantity: qty,
